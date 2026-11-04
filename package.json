@@ -1,0 +1,20 @@
+{
+  "name": "laurasanchezpardo-web",
+  "version": "1.0.0",
+  "description": "Web de Laura Sánchez",
+  "scripts": {
+    "generate": "node scripts/build.mjs",
+    "download-images": "node scripts/download.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@fontsource-variable/arimo": "^5.3.0",
+    "@fontsource-variable/familjen-grotesk": "^5.3.0"
+  },
+  "private": true,
+  "type": "module"
+}

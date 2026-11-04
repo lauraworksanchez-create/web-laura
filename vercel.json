@@ -1,0 +1,67 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "outputDirectory": "public",
+  "installCommand": "",
+  "buildCommand": "",
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/porfolio",
+      "destination": "/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/workshops-1",
+      "destination": "/workshops",
+      "permanent": true
+    },
+    {
+      "source": "/contacto-5",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/203issue",
+      "destination": "/portfolio/mouchi",
+      "permanent": true
+    },
+    {
+      "source": "/203issue-1",
+      "destination": "/portfolio/eonia",
+      "permanent": true
+    },
+    {
+      "source": "/203issue-1-1",
+      "destination": "/portfolio/disowned",
+      "permanent": true
+    },
+    {
+      "source": "/203issue-1-1-1",
+      "destination": "/portfolio/natura-box",
+      "permanent": true
+    },
+    {
+      "source": "/203issue-1-1-1-1",
+      "destination": "/portfolio/lladro",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(img|fonts)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

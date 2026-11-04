@@ -1,0 +1,472 @@
+{
+ "map": {
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/4e00784e-3059-490f-bde6-b302079bc3b2/tempImagehLIQDk.jpg": "/img/tempimagehliqdk-4e0078.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/afa6fbe1-738b-4f2c-845e-b5958da8d97d/Ilustraci%C3%B3n_sin_t%C3%ADtulo.png": "/img/ilustracion-sin-titulo-afa6fb.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/8734b86f-9849-44f1-a3f0-0cb93a462370/IMG_8941+2+copia.jpg": "/img/img-8941-2-copia-8734b8.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/c4dc1e14-5069-4372-9d7e-170cc76b8173/Recurso+1.png": "/img/recurso-1-c4dc1e.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/0728fb5e-c1db-42f7-bf71-d4c2fe7c8591/DTS_Mood_board_Julien_Tell_Photos_ID3499.jpg": "/img/dts-mood-board-julien-tell-photos-id3499-0728fb.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/627be128-0897-4e94-95c2-5989da566878/Captura+de+pantalla+2025-09-28+a+las+12.29.23.png": "/img/captura-de-pantalla-2025-09-28-a-las-12--627be1.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/ad6183e2-27e9-44a3-99d5-2a4c20bfddee/Captura+de+pantalla+2025-09-28+a+las+23.11.11.png": "/img/captura-de-pantalla-2025-09-28-a-las-23--ad6183.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/dc6d6686-1f18-442a-867d-a0cfdee18497/Gemini_Generated_Image_40zshf40zshf40zs.png": "/img/gemini-generated-image-40zshf40zshf40zs-dc6d66.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/e0393c61-41f9-4e6a-8560-c66344ac78cb/Captura+de+pantalla+2025-09-28+a+las+13.19.12.png": "/img/captura-de-pantalla-2025-09-28-a-las-13--e0393c.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/48ab2eef-88bd-4933-9ea9-4778ddffe289/Captura+de+pantalla+2025-08-07+a+las+18.19.45.png": "/img/captura-de-pantalla-2025-08-07-a-las-18--48ab2e.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/18dac7b3-e95d-4944-88d9-a62c3fbc2577/Captura+de+pantalla+2025-09-28+a+las+21.26.37.png": "/img/captura-de-pantalla-2025-09-28-a-las-21--18dac7.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/65c91fd1-7b5e-40ed-b5b4-0e0dabcdc214/Captura+de+pantalla+2025-09-28+a+las+21.40.48.png": "/img/captura-de-pantalla-2025-09-28-a-las-21--65c91f.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/7022bdd2-699c-4972-b287-43ad6b19ecfc/Captura+de+pantalla+2025-08-07+a+las+18.34.19.png": "/img/captura-de-pantalla-2025-08-07-a-las-18--7022bd.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/8565a9ac-5f44-4535-a2a3-117a0c94cea6/Captura+de+pantalla+2025-09-29+a+las+1.23.55.png": "/img/captura-de-pantalla-2025-09-29-a-las-1-2-8565a9.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/713c870a-6024-47d2-ad0d-f7870c196cab/DTS_Mood_board_Julien_Tell_Photos_ID3481.jpg": "/img/dts-mood-board-julien-tell-photos-id3481-713c87.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/c78b67f3-b3e2-41be-973c-cf96a60fe677/tempImageAlP7Hc.jpg": "/img/tempimagealp7hc-c78b67.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/f64bdb2b-a3f4-4b5b-ab34-a58435408e46/Captura+de+pantalla+2025-09-28+a+las+13.04.46.png": "/img/captura-de-pantalla-2025-09-28-a-las-13--f64bdb.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/95495038-dc9d-4bec-a1e8-d9e9a8235253/DTS_Mood_board_Julien_Tell_Photos_ID3496.jpg": "/img/dts-mood-board-julien-tell-photos-id3496-954950.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/92f0a8e4-612f-47eb-8fcd-9646c84dadbb/Captura+de+pantalla+2025-09-28+a+las+16.58.15.png": "/img/captura-de-pantalla-2025-09-28-a-las-16--92f0a8.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/e008e973-da64-48ab-a887-98811f84aa52/Captura+de+pantalla+2025-09-28+a+las+12.29.23.png": "/img/captura-de-pantalla-2025-09-28-a-las-12--e008e9.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/7872f709-b288-4154-ad3b-a88b771f540c/Captura+de+pantalla+2025-09-28+a+las+16.22.59.png": "/img/captura-de-pantalla-2025-09-28-a-las-16--7872f7.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/8ac8f397-20f9-4eb1-aef8-07110b65db2f/Captura+de+pantalla+2025-09-28+a+las+16.02.30.png": "/img/captura-de-pantalla-2025-09-28-a-las-16--8ac8f3.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/a3ade3a9-d360-4ddb-bffd-7444de72192d/Captura+de+pantalla+2025-09-28+a+las+16.18.00.png": "/img/captura-de-pantalla-2025-09-28-a-las-16--a3ade3.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/f15a0677-9b0f-4417-b2b0-4987c01c6036/Captura+de+pantalla+2025-08-07+a+las+18.19.45.png": "/img/captura-de-pantalla-2025-08-07-a-las-18--f15a06.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/d76c9c7b-7de4-4a0b-884f-23c1d7840756/Captura+de+pantalla+2025-09-28+a+las+16.35.54.png": "/img/captura-de-pantalla-2025-09-28-a-las-16--d76c9c.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/7d8d6ef5-df16-4aa5-b3e8-6a6ec4e8f0a4/Captura+de+pantalla+2025-08-07+a+las+18.34.19.png": "/img/captura-de-pantalla-2025-08-07-a-las-18--7d8d6e.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/f2cc942b-85d6-49f6-afab-5853c6e4a038/Captura+de+pantalla+2025-09-28+a+las+16.27.13.png": "/img/captura-de-pantalla-2025-09-28-a-las-16--f2cc94.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/bc62e12d-1846-4d6f-9ee5-1e733f7a1604/myxes_caja-21.jpg": "/img/myxes-caja-21-bc62e1.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/47670edb-e9e0-43ea-80dc-ed50a6d47373/Captura+de+pantalla+2025-09-28+a+las+16.05.47.png": "/img/captura-de-pantalla-2025-09-28-a-las-16--47670e.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/82d6cab8-c5a6-4853-a3c7-b895946dddfa/Captura+de+pantalla+2025-09-28+a+las+16.29.30.png": "/img/captura-de-pantalla-2025-09-28-a-las-16--82d6ca.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/1a42538a-6fcc-4a78-883c-e6552d2f015e/touch1.jpg": "/img/touch1-1a4253.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/35cf237b-a3fa-4b05-9fae-48743ca4eaac/Captura+de+pantalla+2025-09-28+a+las+16.34.36.png": "/img/captura-de-pantalla-2025-09-28-a-las-16--35cf23.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/78cd08fe-b2e5-446c-a228-df31e2e20df2/Captura+de+pantalla+2025-09-28+a+las+17.28.42.png": "/img/captura-de-pantalla-2025-09-28-a-las-17--78cd08.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/294e3175-8ddc-4f52-a2ae-fe832f3d9153/Captura+de+pantalla+2025-09-28+a+las+16.37.42.png": "/img/captura-de-pantalla-2025-09-28-a-las-16--294e31.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/dba983fa-ea6c-4dad-9be0-4a5218057dd9/Captura+de+pantalla+2025-09-28+a+las+16.56.38.png": "/img/captura-de-pantalla-2025-09-28-a-las-16--dba983.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/eb4cee78-64e3-48eb-b1a7-097b58bdc03c/ChatGPT+Image+28+sept+2025%2C+17_22_53.png": "/img/chatgpt-image-28-sept-2025-17-22-53-eb4cee.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/248f2e47-bb03-41a6-aa90-3d4ccb9aeffe/Captura+de+pantalla+2025-09-28+a+las+17.04.06.png": "/img/captura-de-pantalla-2025-09-28-a-las-17--248f2e.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/35b19b88-ba15-4189-baaa-782139cb8585/Captura+de+pantalla+2025-09-29+a+las+2.23.00.png": "/img/captura-de-pantalla-2025-09-29-a-las-2-2-35b19b.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/faf5865f-2c60-4c22-a7ef-fe266e66b61c/Captura+de+pantalla+2025-09-25+a+las+20.53.48.png": "/img/captura-de-pantalla-2025-09-25-a-las-20--faf586.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/b2250931-0e68-45c9-9e83-b6091373f024/Captura+de+pantalla+2025-09-28+a+las+20.39.23.png": "/img/captura-de-pantalla-2025-09-28-a-las-20--b22509.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/50d02cf5-3bed-4b09-ba3a-a099fafabbfb/Captura+de+pantalla+2026-03-27+a+las+12.39.11.png": "/img/captura-de-pantalla-2026-03-27-a-las-12--50d02c.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/8fbd13a1-e546-4837-b357-60d98b341e85/Captura+de+pantalla+2026-03-27+a+las+12.47.13.png": "/img/captura-de-pantalla-2026-03-27-a-las-12--8fbd13.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/b1aea12d-58c0-4f19-90bf-6c4480d0849e/Captura+de+pantalla+2026-03-27+a+las+12.47.17.png": "/img/captura-de-pantalla-2026-03-27-a-las-12--b1aea1.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/ffc4f62e-0abe-42b2-9e64-476e4f6eb7e2/Captura+de+pantalla+2026-03-27+a+las+12.54.15.png": "/img/captura-de-pantalla-2026-03-27-a-las-12--ffc4f6.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/a5c165a2-1fdc-4f55-823f-96bfcf80c499/Captura+de+pantalla+2025-09-28+a+las+20.28.15.png": "/img/captura-de-pantalla-2025-09-28-a-las-20--a5c165.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/41f3ad2e-61c3-4116-950a-33760a78f34f/Captura+de+pantalla+2025-09-28+a+las+20.28.54.png": "/img/captura-de-pantalla-2025-09-28-a-las-20--41f3ad.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/5af9c0ca-121a-4cea-a05a-b37c6f18d507/Presentation+Mockup_1.jpg": "/img/presentation-mockup-1-5af9c0.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/120a90fb-d2f8-4009-bcab-f2a444b3dc88/Captura+de+pantalla+2025-09-28+a+las+20.34.30.png": "/img/captura-de-pantalla-2025-09-28-a-las-20--120a90.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/82d47846-9710-4536-88bc-44f97ebcf68a/Captura+de+pantalla+2025-08-07+a+las+18.17.27.png": "/img/captura-de-pantalla-2025-08-07-a-las-18--82d478.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/b06a9463-95a9-401d-886b-bc01b2d8ee68/Captura+de+pantalla+2025-09-28+a+las+21.26.37.png": "/img/captura-de-pantalla-2025-09-28-a-las-21--b06a94.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/5ecf9667-bc53-4216-9ac8-e2df17299102/Captura+de+pantalla+2026-03-27+a+las+13.37.41.png": "/img/captura-de-pantalla-2026-03-27-a-las-13--5ecf96.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/45a09d6c-de47-44aa-bede-5e8b5fdc465f/Captura+de+pantalla+2025-09-28+a+las+21.33.42.png": "/img/captura-de-pantalla-2025-09-28-a-las-21--45a09d.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/3c1664bc-1d61-487d-af8a-4c5642b07e9b/Captura+de+pantalla+2025-09-28+a+las+21.43.38.png": "/img/captura-de-pantalla-2025-09-28-a-las-21--3c1664.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/4bc9729a-9869-4589-8094-71c206d9ca20/Captura+de+pantalla+2025-09-28+a+las+21.47.34.png": "/img/captura-de-pantalla-2025-09-28-a-las-21--4bc972.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/e014f093-1616-4bf7-aa59-f87d0c6e32c0/Captura+de+pantalla+2025-09-28+a+las+21.48.01.png": "/img/captura-de-pantalla-2025-09-28-a-las-21--e014f0.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/d4a41736-18b0-4429-93bc-6e3e205db9ef/Captura+de+pantalla+2025-09-28+a+las+21.47.00.png": "/img/captura-de-pantalla-2025-09-28-a-las-21--d4a417.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/df443e76-0031-46cf-b78e-a6fc873a54ad/Captura+de+pantalla+2025-09-28+a+las+21.40.48.png": "/img/captura-de-pantalla-2025-09-28-a-las-21--df443e.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/897066fa-26a8-4331-8bdf-de00988d05d0/Captura+de+pantalla+2025-09-28+a+las+23.14.33.png": "/img/captura-de-pantalla-2025-09-28-a-las-23--897066.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/db52c114-6972-4647-a840-cb468a86bd8a/Captura+de+pantalla+2026-03-27+a+las+13.12.28.png": "/img/captura-de-pantalla-2026-03-27-a-las-13--db52c1.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/007f7645-fc63-4f81-81e9-974f9af53f6c/Captura+de+pantalla+2026-03-27+a+las+13.12.37.png": "/img/captura-de-pantalla-2026-03-27-a-las-13--007f76.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/67eac4b2-65bc-4616-b803-ee7ae8661073/Captura+de+pantalla+2026-03-27+a+las+13.12.33.png": "/img/captura-de-pantalla-2026-03-27-a-las-13--67eac4.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/da4f03f3-13dc-4860-9e24-f1d2f0ac587d/Captura+de+pantalla+2026-03-27+a+las+13.12.42.png": "/img/captura-de-pantalla-2026-03-27-a-las-13--da4f03.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/ec7a9988-8367-43c4-998c-c86dbb323882/Knockout+-+Slide+1-1.gif": "/img/knockout-slide-1-1-ec7a99.gif",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/69f0c488-4a1c-4e14-82b7-66c68337a22e/Knockout+-+Slide+2-1+copia.gif": "/img/knockout-slide-2-1-copia-69f0c4.gif",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/d1fdaeca-b43a-4373-bcf7-b75afe5d16a2/Captura+de+pantalla+2026-03-27+a+las+13.19.49.png": "/img/captura-de-pantalla-2026-03-27-a-las-13--d1fdae.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/2a7b8a31-24a5-47dd-90cf-2d1304ff7cb8/Captura+de+pantalla+2026-03-27+a+las+13.19.45.png": "/img/captura-de-pantalla-2026-03-27-a-las-13--2a7b8a.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/b99e1e15-43b2-434a-8805-c17b5659ec07/Captura+de+pantalla+2026-03-27+a+las+13.17.35.png": "/img/captura-de-pantalla-2026-03-27-a-las-13--b99e1e.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/8aa33c44-9cd7-40ba-a1d5-11891d43fb3c/Captura+de+pantalla+2025-09-28+a+las+23.31.37.png": "/img/captura-de-pantalla-2025-09-28-a-las-23--8aa33c.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/6f492e38-df7d-43b1-bc84-5b4c933e7aa8/Captura+de+pantalla+2025-09-28+a+las+23.39.20.png": "/img/captura-de-pantalla-2025-09-28-a-las-23--6f492e.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/28b22f3a-ef31-4522-b635-497b9e2ae8b2/Captura+de+pantalla+2025-09-28+a+las+23.38.35.png": "/img/captura-de-pantalla-2025-09-28-a-las-23--28b22f.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/bfdfd3a4-35dd-4f35-85cf-d6e6c4ccd657/Captura+de+pantalla+2025-09-28+a+las+23.11.11.png": "/img/captura-de-pantalla-2025-09-28-a-las-23--bfdfd3.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/4b58af74-d442-4390-b577-fea68a522e45/Captura+de+pantalla+2025-09-28+a+las+23.36.54.png": "/img/captura-de-pantalla-2025-09-28-a-las-23--4b58af.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/0cded7d5-cc1e-48d7-a436-59df9d3e8dd2/chapa_d.png": "/img/chapa-d-0cded7.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/3444f815-aa94-4c9a-9e6d-94d5fb20f924/NATURA-BOX-25.png": "/img/natura-box-25-3444f8.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/5bf85190-f957-4c3f-850d-f91f34db571f/PHOTO-2025-03-04-09-13-14.jpg": "/img/photo-2025-03-04-09-13-14-5bf851.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/8e104f44-101a-407b-9ce1-f8bc409fbe0c/Captura+de+pantalla+2025-09-29+a+las+0.02.24.png": "/img/captura-de-pantalla-2025-09-29-a-las-0-0-8e104f.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/3bd20f2a-28c3-4afd-a8d6-0c869b34af44/chapa.png": "/img/chapa-3bd20f.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/7bd4a321-891c-41d5-a04e-6ebe584fc927/Captura+de+pantalla+2025-09-29+a+las+0.00.58.png": "/img/captura-de-pantalla-2025-09-29-a-las-0-0-7bd4a3.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/1964825b-890f-4865-a215-00fd0acb4b1c/PHOTO-2025-03-04-09-13-15+3.jpg": "/img/photo-2025-03-04-09-13-15-3-196482.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/2f7c5000-2566-4926-b49b-f085d7069325/PHOTO-2025-03-04-09-13-15.jpg": "/img/photo-2025-03-04-09-13-15-2f7c50.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/0ea55d23-8f3e-4846-9b91-9f1f2c782c75/PHOTO-2025-03-04-08-49-46+2.jpg": "/img/photo-2025-03-04-08-49-46-2-0ea55d.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/456ccac0-7cec-44ad-9364-93b09a9594f2/PHOTO-2025-03-04-08-49-45.jpg": "/img/photo-2025-03-04-08-49-45-456cca.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/7c6577cd-d5b3-497b-8b29-c0ea3ee3a885/PHOTO-2025-03-04-09-13-14+2.jpg": "/img/photo-2025-03-04-09-13-14-2-7c6577.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/09489a6f-13c2-47ab-a284-62496fb5a541/PHOTO-2025-03-04-08-49-46.jpg": "/img/photo-2025-03-04-08-49-46-09489a.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/d676e38e-be58-4ad0-87c7-4f42a46c36be/NATURA-BOX-17.png": "/img/natura-box-17-d676e3.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/216e5445-594c-4cb0-bc88-e33d0e1202ae/Captura+de+pantalla+2025-09-28+a+las+16.02.30.png": "/img/captura-de-pantalla-2025-09-28-a-las-16--216e54.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/2f5c1f5d-8ada-47d7-a80a-b1a076535ef1/Captura+de+pantalla+2025-09-28+a+las+16.59.09.png": "/img/captura-de-pantalla-2025-09-28-a-las-16--2f5c1f.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/c3a5c41f-b677-446c-b956-805e9eb7c9be/Imagen+9-9-21+a+las+12.10+%281%29-2.gif": "/img/imagen-9-9-21-a-las-12-10-1-2-c3a5c4.gif",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/068930be-6a9e-415c-94c2-1cb8bd441df3/ENTREGA_FINAL_TFG_Laura_S%C3%A1nchez+%28arrastrado%29+2_page-0001.jpg": "/img/entrega-final-tfg-laura-sanchez-arrastra-068930.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/3c6c2309-426a-4305-a24c-5e02542a3612/Captura+de+pantalla+2026-03-27+a+las+12.05.08.png": "/img/captura-de-pantalla-2026-03-27-a-las-12--3c6c23.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/8da3b2cd-d2ee-4d2b-95dc-0e58ea3e5d5f/fondo+grande.jpg": "/img/fondo-grande-8da3b2.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/55ac51ae-26f4-443d-9da9-8c9ebc663725/DTS_Mood_board_Julien_Tell_Photos_ID3499.jpg": "/img/dts-mood-board-julien-tell-photos-id3499-55ac51.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/1ae5e16e-bbb9-4eca-97c8-dc7530382f39/Captura+de+pantalla+2026-05-19+a+las+20.40.09.png": "/img/captura-de-pantalla-2026-05-19-a-las-20--1ae5e1.webp",
+  "https://images.squarespace-cdn.com/content/v1/67d20e13f0ed7630721e30f1/ada87037-de3f-4e3d-a93b-ecbdeeb6953f/favicon.ico": "/img/favicon-ada870.ico"
+ },
+ "dims": {
+  "/img/tempimagehliqdk-4e0078.webp": [
+   2000,
+   2666
+  ],
+  "/img/ilustracion-sin-titulo-afa6fb.webp": [
+   2000,
+   1342
+  ],
+  "/img/img-8941-2-copia-8734b8.webp": [
+   2000,
+   2667
+  ],
+  "/img/recurso-1-c4dc1e.webp": [
+   147,
+   156
+  ],
+  "/img/dts-mood-board-julien-tell-photos-id3499-0728fb.webp": [
+   1280,
+   1920
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-12--627be1.webp": [
+   1621,
+   1058
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-23--ad6183.webp": [
+   2000,
+   1331
+  ],
+  "/img/gemini-generated-image-40zshf40zshf40zs-dc6d66.webp": [
+   2000,
+   1404
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-13--e0393c.webp": [
+   1975,
+   1315
+  ],
+  "/img/captura-de-pantalla-2025-08-07-a-las-18--48ab2e.webp": [
+   2000,
+   1117
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-21--18dac7.webp": [
+   1980,
+   688
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-21--65c91f.webp": [
+   2000,
+   1330
+  ],
+  "/img/captura-de-pantalla-2025-08-07-a-las-18--7022bd.webp": [
+   1720,
+   1150
+  ],
+  "/img/captura-de-pantalla-2025-09-29-a-las-1-2-8565a9.webp": [
+   2000,
+   1112
+  ],
+  "/img/dts-mood-board-julien-tell-photos-id3481-713c87.webp": [
+   1280,
+   853
+  ],
+  "/img/tempimagealp7hc-c78b67.webp": [
+   2000,
+   2666
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-13--f64bdb.webp": [
+   1678,
+   1178
+  ],
+  "/img/dts-mood-board-julien-tell-photos-id3496-954950.webp": [
+   1280,
+   1920
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-16--92f0a8.webp": [
+   2000,
+   1263
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-12--e008e9.webp": [
+   1728,
+   1128
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-16--7872f7.webp": [
+   2000,
+   1434
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-16--8ac8f3.webp": [
+   2000,
+   1392
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-16--a3ade3.webp": [
+   2000,
+   1398
+  ],
+  "/img/captura-de-pantalla-2025-08-07-a-las-18--f15a06.webp": [
+   2000,
+   1117
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-16--d76c9c.webp": [
+   1416,
+   1514
+  ],
+  "/img/captura-de-pantalla-2025-08-07-a-las-18--7d8d6e.webp": [
+   1720,
+   1150
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-16--f2cc94.webp": [
+   1066,
+   1522
+  ],
+  "/img/myxes-caja-21-bc62e1.webp": [
+   2000,
+   1424
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-16--47670e.webp": [
+   1072,
+   1150
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-16--82d6ca.webp": [
+   994,
+   1442
+  ],
+  "/img/touch1-1a4253.webp": [
+   2000,
+   1500
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-16--35cf23.webp": [
+   800,
+   1184
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-17--78cd08.webp": [
+   1722,
+   1498
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-16--294e31.webp": [
+   1122,
+   1520
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-16--dba983.webp": [
+   1968,
+   1518
+  ],
+  "/img/chatgpt-image-28-sept-2025-17-22-53-eb4cee.webp": [
+   1024,
+   1536
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-17--248f2e.webp": [
+   1524,
+   1518
+  ],
+  "/img/captura-de-pantalla-2025-09-29-a-las-2-2-35b19b.webp": [
+   1116,
+   1040
+  ],
+  "/img/captura-de-pantalla-2025-09-25-a-las-20--faf586.webp": [
+   2000,
+   1122
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-20--b22509.webp": [
+   1462,
+   486
+  ],
+  "/img/captura-de-pantalla-2026-03-27-a-las-12--50d02c.webp": [
+   759,
+   893
+  ],
+  "/img/captura-de-pantalla-2026-03-27-a-las-12--8fbd13.webp": [
+   369,
+   444
+  ],
+  "/img/captura-de-pantalla-2026-03-27-a-las-12--b1aea1.webp": [
+   365,
+   445
+  ],
+  "/img/captura-de-pantalla-2026-03-27-a-las-12--ffc4f6.webp": [
+   1585,
+   793
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-20--a5c165.webp": [
+   1084,
+   1072
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-20--41f3ad.webp": [
+   976,
+   654
+  ],
+  "/img/presentation-mockup-1-5af9c0.webp": [
+   2000,
+   1500
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-20--120a90.webp": [
+   990,
+   492
+  ],
+  "/img/captura-de-pantalla-2025-08-07-a-las-18--82d478.webp": [
+   1480,
+   1092
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-21--b06a94.webp": [
+   1980,
+   688
+  ],
+  "/img/captura-de-pantalla-2026-03-27-a-las-13--5ecf96.webp": [
+   2000,
+   958
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-21--45a09d.webp": [
+   1770,
+   190
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-21--3c1664.webp": [
+   1112,
+   874
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-21--4bc972.webp": [
+   1144,
+   1046
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-21--e014f0.webp": [
+   1610,
+   1080
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-21--d4a417.webp": [
+   2000,
+   1047
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-21--df443e.webp": [
+   2000,
+   1330
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-23--897066.webp": [
+   2000,
+   1098
+  ],
+  "/img/captura-de-pantalla-2026-03-27-a-las-13--db52c1.webp": [
+   939,
+   373
+  ],
+  "/img/captura-de-pantalla-2026-03-27-a-las-13--007f76.webp": [
+   940,
+   332
+  ],
+  "/img/captura-de-pantalla-2026-03-27-a-las-13--67eac4.webp": [
+   951,
+   370
+  ],
+  "/img/captura-de-pantalla-2026-03-27-a-las-13--da4f03.webp": [
+   938,
+   369
+  ],
+  "/img/knockout-slide-1-1-ec7a99.gif": [
+   1080,
+   1920
+  ],
+  "/img/knockout-slide-2-1-copia-69f0c4.gif": [
+   1080,
+   1920
+  ],
+  "/img/captura-de-pantalla-2026-03-27-a-las-13--d1fdae.webp": [
+   343,
+   384
+  ],
+  "/img/captura-de-pantalla-2026-03-27-a-las-13--2a7b8a.webp": [
+   346,
+   381
+  ],
+  "/img/captura-de-pantalla-2026-03-27-a-las-13--b99e1e.webp": [
+   1082,
+   1026
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-23--8aa33c.webp": [
+   1522,
+   750
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-23--6f492e.webp": [
+   1066,
+   878
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-23--28b22f.webp": [
+   884,
+   812
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-23--bfdfd3.webp": [
+   2000,
+   1331
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-23--4b58af.webp": [
+   1136,
+   898
+  ],
+  "/img/chapa-d-0cded7.webp": [
+   2000,
+   1600
+  ],
+  "/img/natura-box-25-3444f8.webp": [
+   2000,
+   2059
+  ],
+  "/img/photo-2025-03-04-09-13-14-5bf851.webp": [
+   2000,
+   1500
+  ],
+  "/img/captura-de-pantalla-2025-09-29-a-las-0-0-8e104f.webp": [
+   850,
+   324
+  ],
+  "/img/chapa-3bd20f.webp": [
+   2000,
+   1600
+  ],
+  "/img/captura-de-pantalla-2025-09-29-a-las-0-0-7bd4a3.webp": [
+   854,
+   434
+  ],
+  "/img/photo-2025-03-04-09-13-15-3-196482.webp": [
+   2000,
+   2666
+  ],
+  "/img/photo-2025-03-04-09-13-15-2f7c50.webp": [
+   2000,
+   1500
+  ],
+  "/img/photo-2025-03-04-08-49-46-2-0ea55d.webp": [
+   2000,
+   2993
+  ],
+  "/img/photo-2025-03-04-08-49-45-456cca.webp": [
+   2000,
+   1274
+  ],
+  "/img/photo-2025-03-04-09-13-14-2-7c6577.webp": [
+   2000,
+   1500
+  ],
+  "/img/photo-2025-03-04-08-49-46-09489a.webp": [
+   2000,
+   1340
+  ],
+  "/img/natura-box-17-d676e3.webp": [
+   2000,
+   1686
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-16--216e54.webp": [
+   2000,
+   1392
+  ],
+  "/img/captura-de-pantalla-2025-09-28-a-las-16--2f5c1f.webp": [
+   2000,
+   844
+  ],
+  "/img/imagen-9-9-21-a-las-12-10-1-2-c3a5c4.gif": [
+   2500,
+   1667
+  ],
+  "/img/entrega-final-tfg-laura-sanchez-arrastra-068930.webp": [
+   1754,
+   1241
+  ],
+  "/img/captura-de-pantalla-2026-03-27-a-las-12--3c6c23.webp": [
+   2000,
+   1122
+  ],
+  "/img/fondo-grande-8da3b2.webp": [
+   2000,
+   862
+  ],
+  "/img/dts-mood-board-julien-tell-photos-id3499-55ac51.webp": [
+   1280,
+   1920
+  ],
+  "/img/captura-de-pantalla-2026-05-19-a-las-20--1ae5e1.webp": [
+   2000,
+   1114
+  ]
+ }
+}
