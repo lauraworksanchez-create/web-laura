@@ -263,10 +263,12 @@ function contactPage(lang) {
       ${L(c.city)}
     </div>
   </div>
-  <form class="form" action="https://formsubmit.co/ajax/${site.email}" method="POST"
+  <form class="form" action="https://formsubmit.co/${site.email}" method="POST"
         data-ok="${attr(L(f.ok))}" data-error="${attr(L(f.error))}" data-sending="${attr(L(f.sending))}" data-email="${site.email}">
     <input type="hidden" name="_subject" value="${lang === 'es' ? 'Nuevo mensaje desde la web' : 'New message from the website'}">
     <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="${site.domain}${absHref(lang, 'contact')}?enviado=1">
     <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <fieldset>
       <legend>${L(f.name)}</legend>
