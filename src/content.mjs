@@ -526,7 +526,8 @@ projects.host = {
 };
 
 /* ---------- Legal ---------- */
-site.nif = ''; // Rellena tu NIF si quieres que aparezca en el aviso legal (LSSI-CE lo pide si ofreces servicios)
+site.nif = '';
+site.web3formsKey = 'c2d2772a-ecff-4603-a7ea-05c07881bb42'; // clave pública de Web3Forms (web3forms.com) // Rellena tu NIF si quieres que aparezca en el aviso legal (LSSI-CE lo pide si ofreces servicios)
 routes.privacy = 'privacidad';
 routes.legal = 'aviso-legal';
 site.legalLinks = [
@@ -552,7 +553,7 @@ export const legal = {
 <h2>Cuánto tiempo se conservan</h2>
 <p>El tiempo necesario para atender tu consulta y, como máximo, un año desde el último contacto, salvo que exista una relación profesional que obligue a conservarlos más tiempo.</p>
 <h2>Proveedores</h2>
-<p>La web está alojada en Vercel Inc. y el formulario se envía a través de FormSubmit. Ambos proveedores pueden tratar datos fuera del Espacio Económico Europeo con las garantías previstas en el RGPD, como las cláusulas contractuales tipo de la Comisión Europea.</p>
+<p>La web está alojada en Vercel Inc. y el formulario se envía a través de Web3Forms. Ambos proveedores pueden tratar datos fuera del Espacio Económico Europeo con las garantías previstas en el RGPD, como las cláusulas contractuales tipo de la Comisión Europea.</p>
 <h2>Cookies y analítica</h2>
 <p>Esta web no instala cookies propias ni de terceros. Para conocer el número de visitas se usa Vercel Web Analytics, que no utiliza cookies y solo recoge datos agregados y anónimos. Por eso no ves ningún banner de cookies.</p>
 <h2>Tus derechos</h2>
@@ -566,7 +567,7 @@ export const legal = {
 <h2>How long it is kept</h2>
 <p>For as long as needed to deal with your enquiry and, at most, one year from the last contact, unless a professional relationship requires keeping it longer.</p>
 <h2>Providers</h2>
-<p>The website is hosted by Vercel Inc. and the form is sent through FormSubmit. Both providers may process data outside the European Economic Area under the safeguards set out in the GDPR, such as the European Commission’s standard contractual clauses.</p>
+<p>The website is hosted by Vercel Inc. and the form is sent through Web3Forms. Both providers may process data outside the European Economic Area under the safeguards set out in the GDPR, such as the European Commission’s standard contractual clauses.</p>
 <h2>Cookies and analytics</h2>
 <p>This website does not set its own or third-party cookies. Visits are counted with Vercel Web Analytics, which uses no cookies and only collects aggregated, anonymous data. That is why there is no cookie banner.</p>
 <h2>Your rights</h2>

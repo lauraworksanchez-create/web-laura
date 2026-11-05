@@ -21,7 +21,7 @@ Después sube los cambios a GitHub y Vercel publica solo.
 
 ## Formulario de contacto
 
-Usa FormSubmit (gratis, sin cuenta). La primera vez que alguien envíe el formulario llegará un email a laurawork.sanchez@gmail.com para activarlo: hay que pulsar el enlace una vez.
+Usa Web3Forms (gratis, 250 mensajes al mes). La clave pública está en `src/content.mjs` (`site.web3formsKey`). Los mensajes llegan a laurawork.sanchez@gmail.com.
 
 ## Fuentes
 

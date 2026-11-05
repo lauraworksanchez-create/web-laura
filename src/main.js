@@ -118,16 +118,22 @@ if (zoomables.length) {
   addEventListener('keydown', e => { if (e.key === 'Escape' && box.classList.contains('open')) hide(); });
 }
 
-// Formulario de contacto (FormSubmit, envío normal: la primera vez pide activar por email)
+// Formulario de contacto (Web3Forms)
 const form = document.querySelector('form.form');
-if (form) {
-  const status = form.querySelector('.status');
-  if (new URLSearchParams(location.search).has('enviado')) {
+form?.addEventListener('submit', async e => {
+  e.preventDefault();
+  const status = form.querySelector('.status'), send = form.querySelector('button[type=submit]');
+  const label = send.textContent;
+  send.disabled = true; send.textContent = form.dataset.sending;
+  status.className = 'status full'; status.textContent = '';
+  try {
+    const res = await fetch(form.action, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || !data.success) throw new Error(data.message || 'error');
+    form.reset();
     status.classList.add('ok'); status.textContent = form.dataset.ok;
-    history.replaceState(null, '', location.pathname);
-  }
-  form.addEventListener('submit', () => {
-    const send = form.querySelector('button[type=submit]');
-    send.disabled = true; send.textContent = form.dataset.sending;
-  });
-}
+  } catch {
+    status.classList.add('err');
+    status.innerHTML = `${form.dataset.error} <a href="mailto:${form.dataset.email}">${form.dataset.email}</a>`;
+  } finally { send.disabled = false; send.textContent = label; }
+});
