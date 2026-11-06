@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>DE LA CASA · Project Proposal · Lines Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Sora:wght@300;400;500&display=swap" rel="stylesheet">
+<script>
+  // Proposal expiry: change this date to extend it
+  window.EXPIRES = '2026-12-07T23:59:59+01:00';
+  if (Date.now() > Date.parse(window.EXPIRES)) document.documentElement.classList.add('expired');
+</script>
+<style>
+:root{
+  --ink:#222222; --paper:#F8F8F6; --white:#FFFFFF; --grey:#8C8C8C; --line:#E2E2E2;
+  --wine:#7B2638; --olive:#4A5A2A; --terra:#C9573A; --rose:#E9B8B3; --lemon:#F2D27A;
+  --sora:"Sora","Inter",system-ui,sans-serif;
+  --inter:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --px:clamp(22px,6vw,96px);
+  --py:clamp(72px,11vh,120px);
+  --body:clamp(15px,min(1.12vw,2.05vh),18px);
+  --small:clamp(12px,min(.9vw,1.65vh),14px);
+  --h2:clamp(32px,min(4vw,7.2vh),62px);
+  --h3:clamp(20px,min(1.7vw,3.1vh),28px);
+  --ease:cubic-bezier(.22,1,.36,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--inter);font-size:var(--body);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;width:100%;height:100%;object-fit:cover}
+h1,h2,h3{font-family:var(--sora);font-weight:400;letter-spacing:-.025em;line-height:1.05}
+h2{font-size:var(--h2)}
+h3{font-size:var(--h3)}
+a{color:inherit}
+b{font-weight:600}
+:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+
+/* expired */
+#expired{display:none}
+.expired #expired{display:flex;min-height:100svh;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 var(--px);gap:20px}
+.expired #expired h1{font-size:clamp(36px,5vw,64px);font-weight:300;letter-spacing:-.04em}
+.expired main,.expired .bar,.expired .count,.expired .progress{display:none!important}
+.expired html,html.expired{scroll-snap-type:none!important}
+/* chrome */
+.bar{position:fixed;inset:0 0 auto;z-index:50;display:flex;justify-content:space-between;padding:calc(env(safe-area-inset-top,0px) + 18px) var(--px) 0;font-size:11px;letter-spacing:.08em;color:#fff;mix-blend-mode:difference;pointer-events:none}
+.count{position:fixed;right:var(--px);bottom:calc(env(safe-area-inset-bottom,0px) + 18px);z-index:50;font-family:var(--sora);font-size:13px;color:#fff;mix-blend-mode:difference;font-variant-numeric:tabular-nums;pointer-events:none}
+.progress{position:fixed;top:0;left:0;height:2px;width:100%;background:var(--wine);transform-origin:0 50%;transform:scaleX(0);z-index:60}
+
+/* slides */
+.slide{position:relative;overflow:hidden}
+.pad{padding:var(--py) var(--px)}
+@media (min-width:900px) and (min-height:560px){
+  html{scroll-snap-type:y mandatory}
+  .slide{height:100vh;scroll-snap-align:start;scroll-snap-stop:always}
+}
+.center{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+
+/* motion: everything waits for its slide */
+.rv{opacity:0;transform:translateY(26px);filter:blur(6px);transition:opacity 1s var(--ease),transform 1.1s var(--ease),filter 1s var(--ease)}
+.active .rv,.rv.on{opacity:1;transform:none;filter:none}
+.d1{transition-delay:.1s!important}.d2{transition-delay:.2s!important}.d3{transition-delay:.3s!important}.d4{transition-delay:.4s!important}.d5{transition-delay:.5s!important}.d6{transition-delay:.6s!important}
+.line{display:block;overflow:hidden;padding-bottom:.08em}
+.line>span{display:block;transform:translateY(108%);transition:transform 1.3s var(--ease)}
+.active .line>span,.line.on>span{transform:none}
+.active .line:nth-child(2)>span{transition-delay:.12s}
+.active .line:nth-child(3)>span{transition-delay:.24s}
+.zoom img{transform:scale(1.14);transition:transform 2.4s var(--ease)}
+.active .zoom img,.active.zoom img,.zoom.on img{transform:scale(1)}
+
+/* 1 hero */
+.hero{min-height:100svh;color:#fff;background:#3a0f14}
+.hero .bg{position:absolute;inset:0}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.1) 45%,rgba(0,0,0,.55))}
+.hero .in{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:calc(env(safe-area-inset-top,0px) + 84px) var(--px) calc(env(safe-area-inset-bottom,0px) + 52px)}
+.hero h1{font-size:clamp(64px,min(13vw,23vh),220px);font-weight:300;letter-spacing:-.05em;line-height:.88}
+.hero .meta{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-top:4vh;font-size:var(--small)}
+.hint{display:flex;align-items:center;gap:12px}
+.keys{display:inline-flex;gap:4px}
+.keys span{width:22px;height:22px;border:1px solid rgba(255,255,255,.6);display:grid;place-items:center;font-size:11px}
+
+/* 2 split */
+.split{display:grid;grid-template-columns:1fr 1fr}
+.split .txt{display:flex;flex-direction:column;justify-content:center;gap:3.2vh;padding:var(--py) var(--px)}
+.split .txt p{max-width:44ch}
+.split .img{position:relative;overflow:hidden}
+.lead{font-size:clamp(17px,min(1.45vw,2.6vh),22px);line-height:1.5}
+
+/* 3 statement */
+.statement{background:var(--paper)}
+.statement .lbl{position:absolute;top:calc(var(--py) + 10px);left:0;right:0;font-size:var(--small);color:var(--grey)}
+.statement .big{font-family:var(--sora);font-size:clamp(42px,min(7.4vw,13vh),128px);line-height:1.02;letter-spacing:-.04em;max-width:14ch}
+.statement .w{display:inline-block;opacity:.1;filter:blur(8px);transform:translateY(.15em);transition:opacity .9s var(--ease),filter .9s var(--ease),transform .9s var(--ease)}
+.statement.active .w,.big.on .w{opacity:1;filter:none;transform:none}
+.statement .foot2{position:absolute;left:var(--px);right:var(--px);bottom:calc(var(--py) - 10px);display:grid;grid-template-columns:1fr 1fr;gap:5vw;max-width:980px;margin:0 auto;text-align:left;font-size:var(--small);color:#555}
+
+/* heard */
+.heard{display:grid;grid-template-columns:1fr 1fr;background:var(--white)}
+.heard .txt{display:flex;flex-direction:column;justify-content:center;padding:var(--py) var(--px)}
+.heard .sub{color:var(--grey);font-style:italic;font-size:var(--small);margin-top:1.2vh}
+.heard ol{list-style:none;margin-top:4.5vh;display:grid;gap:2.3vh;counter-reset:h}
+.heard li{display:grid;grid-template-columns:44px 1fr;counter-increment:h;font-size:var(--body)}
+.heard li::before{content:counter(h,decimal-leading-zero);color:var(--wine);font-size:var(--small);padding-top:3px}
+.heard li b{display:block}
+.heard .grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+.heard .grid div{overflow:hidden}
+
+/* mood */
+.mood{display:flex;flex-direction:column}
+.mood h2{margin-bottom:4.5vh}
+.mosaic{flex:1;min-height:0;display:grid;grid-template-columns:1.3fr 1fr 1fr .9fr;grid-template-rows:1fr 1fr;gap:12px}
+.mosaic div{overflow:hidden}
+.mosaic .a,.mosaic .d,.mosaic .e{grid-row:1/3}
+
+/* divider */
+.div{min-height:100svh;color:#fff;background:#222}
+.div .bg{position:absolute;inset:0}
+.div .bg::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.4)}
+.div .t{position:absolute;left:var(--px);right:var(--px);bottom:calc(var(--py) + 2vh)}
+.div .n{font-size:var(--small);margin-bottom:3vh}
+.div h2{font-size:clamp(58px,min(10.5vw,19vh),170px);font-weight:300;letter-spacing:-.05em;line-height:.9}
+
+/* options */
+.options{display:flex;flex-direction:column}
+.opts{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,48px);margin-top:4.5vh}
+.opt .ph{position:relative;height:min(38vh,30vw);overflow:hidden}
+.opt .tag{font-size:var(--small);color:var(--wine);margin:2.8vh 0 .6vh}
+.opt h3{font-size:clamp(28px,min(2.6vw,4.8vh),42px);margin-bottom:1.6vh}
+.opt p{max-width:50ch}
+
+/* phrase slides */
+.phrase{min-height:100svh}
+.phrase .big{font-family:var(--sora);font-weight:300;font-size:clamp(44px,min(7.6vw,13.5vh),132px);line-height:1;letter-spacing:-.045em}
+.phrase p.small{margin-top:5vh;font-size:clamp(15px,min(1.3vw,2.4vh),20px);max-width:40ch}
+.ph-olive{background:var(--olive);color:#fff}
+.ph-lemon{background:var(--lemon);color:var(--ink)}
+
+/* phases */
+.phases{display:grid;grid-template-columns:minmax(220px,22%) 1fr;gap:clamp(20px,3vw,48px);align-items:stretch}
+.phases .intro{display:flex;flex-direction:column;justify-content:space-between;padding:2vh 0}
+.phases .intro p{margin-top:2.4vh}
+.phases .intro .note{font-size:var(--small);font-style:italic;color:var(--grey)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;height:100%}
+.card{position:relative;color:#fff;overflow:hidden;background:#333;min-height:320px}
+.card img{position:absolute;inset:0;transform:scale(1.12);transition:transform 2s var(--ease)}
+.active .card img,.card.on img{transform:scale(1)}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.08) 35%,rgba(0,0,0,.12) 55%,rgba(0,0,0,.82))}
+.card .c{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(18px,1.8vw,28px)}
+.card h3{font-size:clamp(24px,min(2.1vw,4vh),34px)}
+.card small{display:block;font-size:11px;letter-spacing:.1em;margin-top:1vh;opacity:.85}
+.card p{font-size:var(--small);line-height:1.5}
+.card em{opacity:.8}
+
+/* numbers */
+.num-grid{height:100%;display:grid;grid-template-columns:minmax(200px,.8fr) 1fr 1fr;gap:clamp(18px,2.2vw,32px)}
+.num-side{display:flex;flex-direction:column;justify-content:space-between;gap:4vh}
+.num-side .big{font-family:var(--sora);font-size:clamp(34px,min(3.2vw,6vh),52px)}
+.num-side h3{margin-top:1vh}
+.extras{font-size:var(--small);line-height:1.75}
+.vat{font-size:12px;color:var(--grey);margin-top:2vh}
+.plan{border:1px solid var(--line);background:#fff;padding:clamp(18px,min(2.2vw,3.6vh),36px);display:flex;flex-direction:column;min-height:0}
+.plan.dark{background:var(--olive);border-color:var(--olive);color:#fff}
+.plan .lbl{font-weight:600;font-size:var(--small);margin:1.8vh 0 1vh}
+.plan ul{list-style:none;display:grid;gap:.55vh;font-size:clamp(13px,min(1.05vw,1.9vh),16px);line-height:1.45}
+.plan li{padding-left:16px;position:relative}
+.plan li::before{content:"";position:absolute;left:0;top:.75em;width:6px;height:1px;background:currentColor}
+.price{margin-top:auto;padding-top:2vh;border-top:1px solid var(--line)}
+.plan.dark .price{border-color:rgba(255,255,255,.25)}
+.price .v{font-family:var(--sora);font-size:clamp(36px,min(4.2vw,7.2vh),68px);letter-spacing:-.035em;color:var(--wine);line-height:1.1;font-variant-numeric:tabular-nums}
+.plan.dark .price .v{color:var(--lemon)}
+.price small{display:block;font-size:12px;color:var(--grey);margin-top:.6vh}
+.plan.dark .price small{color:#D9DEC9}
+
+@media (min-width:900px) and (max-height:800px){
+  .plan h3{font-size:clamp(18px,3vh,24px)}
+  .num-side .big{font-size:5vh}
+  .extras{line-height:1.6}
+}
+/* dates */
+.dates{display:grid;grid-template-columns:minmax(260px,.75fr) 1.35fr;gap:clamp(28px,5vw,88px);align-items:center}
+.dates .sm{font-size:12px;letter-spacing:.08em;margin-top:1.4vh}
+.kd{list-style:none;margin-top:4vh;display:grid;gap:1.6vh}
+.kd b{margin-right:6px}
+.cal{background:#fff;border:1px solid var(--line);padding:clamp(16px,2vw,28px);box-shadow:0 24px 60px -36px rgba(0,0,0,.3)}
+.cal h3{font-family:var(--inter);font-weight:600;font-size:clamp(15px,1.2vw,18px);letter-spacing:0;margin-bottom:2vh}
+.cal .head,.cal .row{display:grid;grid-template-columns:repeat(7,1fr)}
+.cal .head span{font-size:11px;color:var(--grey);text-align:center;padding-bottom:1vh}
+.cal .row{position:relative;border-top:1px solid #EEE;height:clamp(48px,7.6vh,66px)}
+.cal .row span{font-size:12px;text-align:right;padding:6px 8px 0 0}
+.cal .row span.we{color:#AAA}.cal .row span.m{font-weight:700}
+.barx{position:absolute;bottom:14%;height:clamp(20px,3vh,26px);display:flex;align-items:center;padding:0 9px;font-size:11px;font-weight:600;color:#fff;white-space:nowrap;overflow:hidden;transform:scaleX(0);transform-origin:0 50%;transition:transform 1s var(--ease)}
+.active .barx,.cal.on .barx{transform:none}
+.barx i.s{display:none}
+.barx i{font-style:normal;opacity:0;transition:opacity .5s ease .7s}
+.active .barx i,.cal.on .barx i{opacity:1}
+
+/* eye */
+.eye{display:grid;grid-template-columns:minmax(230px,.65fr) 2fr;gap:clamp(28px,4vw,64px)}
+.eye .side{display:flex;flex-direction:column}
+.eye .side p{margin-top:2.4vh;max-width:30ch}
+.eye .side .pic{margin-top:auto;height:34vh;overflow:hidden}
+.eyes{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:14px}
+.eyes article{background:#fff;border:1px solid var(--line);padding:clamp(20px,2vw,32px)}
+.eyes .dot{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:600;margin-bottom:2.4vh}
+.eyes h3{font-size:clamp(18px,min(1.5vw,2.8vh),24px);margin-bottom:1.2vh}
+.eyes p{font-size:var(--small);max-width:42ch;line-height:1.6}
+
+/* together */
+.together{background:var(--terra);color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.half{width:120px;height:60px;background:#fff;border-radius:0 0 120px 120px;margin-top:5vh}
+.together dl{display:grid;gap:2.4vh;max-width:540px}
+.together dd{opacity:.95;font-size:var(--small);line-height:1.6}
+
+/* need */
+.need{display:flex;flex-direction:column}
+.band{position:relative;flex:1.15;color:#fff;display:grid;grid-template-columns:1fr 1.2fr;align-items:center;gap:40px;padding:calc(var(--py) * .9) var(--px) 5vh}
+.band>img{position:absolute;inset:0}
+.band::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.5)}
+.band>*:not(img){position:relative;z-index:2}
+.band ul{display:grid;gap:1vh;padding-left:18px;font-size:var(--small)}
+.stats{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:14px var(--px) calc(var(--py) * .8)}
+.stats div{background:#E7E7E4;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3vh 20px}
+.stats b{display:block;font-family:var(--sora);font-weight:400;font-size:clamp(34px,min(3.8vw,7vh),60px);letter-spacing:-.035em;line-height:1.1}
+.stats span{display:block;margin-top:1vh;font-size:var(--small);max-width:26ch}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr}
+.contact .txt{padding:var(--py) var(--px);display:flex;flex-direction:column;justify-content:center}
+.semi{width:clamp(160px,16vw,240px);aspect-ratio:2/1;border-radius:0 0 999px 999px;overflow:hidden;margin-top:5vh}
+.card2{position:relative;color:#fff;overflow:hidden;padding:var(--py) var(--px);display:flex;flex-direction:column;justify-content:space-between}
+.card2>img{position:absolute;inset:0}
+.card2::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.42)}
+.card2>*:not(img){position:relative;z-index:2}
+.who{display:flex;gap:22px;align-items:center}
+.face{width:clamp(88px,8vw,120px);aspect-ratio:1;border-radius:50%;overflow:hidden;flex:none}
+.who b{display:block}
+.reach{text-align:right}
+.reach a{text-decoration:none;border-bottom:1px solid rgba(255,255,255,.45)}
+
+/* end */
+.end{position:relative;display:flex;align-items:center;background:radial-gradient(90% 90% at 68% 55%,#FFFFFF 0%,var(--paper) 55%,#EDEDE9 100%)}
+.end .words{position:relative;z-index:1;padding:var(--py) var(--px)}
+.end .big3{font-family:var(--sora);font-weight:300;font-size:clamp(56px,min(6.6vw,12.5vh),132px);letter-spacing:-.05em;line-height:1}
+.end .r{display:flex;align-items:center;gap:clamp(12px,1.4vw,24px)}
+.end .r+.r{margin-top:2.2vh}
+.end .p{display:block;flex:0 0 clamp(100px,13vw,250px);height:clamp(54px,min(6.6vw,12vh),124px);overflow:hidden}
+.end .thanks{margin-top:5vh;font-size:clamp(16px,1.4vw,20px)}
+.end .cap{margin-top:1vh;font-size:var(--small);color:var(--grey)}
+.canwrap{position:absolute;inset:0;z-index:2;pointer-events:none}
+.canwrap canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y}
+.opt .otx{position:relative}
+/* mobile */
+@media (max-width:899px), (max-height:559px){
+  :root{--px:22px;--py:64px;--body:15.5px;--small:13.5px;--h2:clamp(32px,9vw,42px);--h3:21px}
+  body{line-height:1.6}
+  .split,.heard,.contact,.together,.phases,.num-grid,.dates,.eye,.opts{grid-template-columns:1fr}
+  .hero h1{font-size:clamp(68px,22vw,110px)}
+  .hero .in{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 36px)}
+  .hero .meta{margin-top:20px}
+  .split .txt{gap:20px}
+  .split .img{height:58svh;order:-1}
+  .statement{min-height:100svh;padding:110px var(--px) 56px;justify-content:space-between}
+  .statement .lbl{position:static}
+  .statement .big{font-size:clamp(44px,12.5vw,64px);margin:auto 0}
+  .statement .foot2{position:static;grid-template-columns:1fr;gap:14px;margin-top:0}
+  .heard .grid{height:auto;grid-template-rows:none;order:-1}
+  .heard .grid div{aspect-ratio:1}
+  .heard ol{gap:16px;margin-top:28px}
+  .heard li{grid-template-columns:36px 1fr}
+
+  /* swipe rows */
+  .swipe{display:flex!important;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 calc(var(--px) * -1);padding:0 var(--px);scroll-padding:0 var(--px)}
+  .swipe::-webkit-scrollbar{display:none}
+  .swipe>*{flex:0 0 78%;scroll-snap-align:start}
+  .swipe-hint{display:flex!important;gap:6px;margin-top:16px;justify-content:center}
+  .swipe-hint i{width:6px;height:6px;border-radius:50%;background:#CFCFCB;transition:background .3s,width .3s}
+  .swipe-hint i.on{background:var(--ink);width:18px;border-radius:3px}
+
+  .mood h2{margin-bottom:28px}
+  .mosaic{grid-template-rows:none}
+  .mosaic>div{height:62vh;grid-row:auto!important}
+
+  .opts{gap:12px;margin-top:24px}
+  .opt{position:relative;color:#fff;overflow:hidden}
+  .opt .ph{height:auto;aspect-ratio:4/5}
+  .opt .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 25%,rgba(0,0,0,.78) 100%)}
+  .opt .otx{position:absolute;left:0;right:0;bottom:0;padding:22px;z-index:2}
+  .opt .tag{color:#fff;opacity:.85;margin:0 0 4px}
+  .opt h3{font-size:30px;margin-bottom:10px}
+  .opt p{font-size:14px;line-height:1.5}
+
+  .phrase .big{font-size:clamp(42px,12vw,64px)}
+  .phrase p.small{margin-top:28px}
+
+  .div h2{font-size:clamp(58px,17vw,90px)}
+
+  .phases{gap:28px}
+  .phases .intro{padding:0;gap:16px}
+  .cards{height:auto}
+  .card{height:64vh;min-height:420px}
+  .card p{font-size:15px}
+
+  .num-side{display:contents}
+  .num-side>div:first-child{order:0}
+  .num-side>div:last-child{order:3;margin-top:12px}
+  .plan:not(.dark){order:1}.plan.dark{order:2}
+  .num-grid{gap:16px}
+  .plan{padding:26px}
+  .plan ul{gap:6px;font-size:15px}
+  .price .v{font-size:52px}
+
+  .dates{gap:36px}
+  .kd{gap:12px}
+  .cal{margin:0 calc(var(--px) * -1);padding:18px 12px;border-left:0;border-right:0}
+  .cal .row{height:52px}
+  .cal .row span{font-size:11px;padding:5px 4px 0 0}
+  .barx{font-size:10px;padding:0 6px;height:20px}
+  .barx i.l{display:none}.barx i.s{display:block}
+
+  .eye{gap:28px}
+  .eye .side .pic{display:none}
+  .eyes{grid-template-columns:1fr;grid-template-rows:none;gap:10px}
+  .eyes article{padding:24px}
+  .eyes .dot{margin-bottom:14px}
+
+  .together{gap:32px}
+  .half{margin-top:24px}
+  .together dl{gap:18px}
+
+  .band{grid-template-columns:1fr;padding:var(--py) var(--px) 44px;gap:22px;min-height:70svh;align-content:end}
+  .stats{grid-template-columns:1fr;gap:10px;padding:10px var(--px) var(--py)}
+  .stats div{flex-direction:row;justify-content:flex-start;gap:18px;text-align:left;padding:20px}
+  .stats b{font-size:30px;flex:0 0 120px}
+  .stats span{margin:0}
+
+  .contact .txt{padding:var(--py) var(--px) 36px}
+  .semi{margin-top:24px}
+  .card2{min-height:78svh}
+  .reach{text-align:left}
+
+  .end{display:block;min-height:100svh}
+  .end .words{padding:var(--py) var(--px) 0;text-align:left}
+  .end .big3{font-size:clamp(36px,10vw,56px)}
+  .end .p{flex-basis:21vw;height:12vw}
+  .end .thanks{margin-top:20px}
+  .hint,.count{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .rv,.statement .w{opacity:1;transform:none;filter:none}
+  .line>span,.zoom img,.card img,.barx{transform:none}
+  .barx i{opacity:1}
+  html{scroll-snap-type:none}
+}
+</style>
+</head>
+<body>
+<section id="expired" aria-label="Proposal expired">
+  <h1>This proposal has expired.</h1>
+  <p>Get in touch for an updated version: <a href="mailto:laurawork.sanchez@gmail.com">laurawork.sanchez@gmail.com</a></p>
+  <p style="font-size:var(--small);color:var(--grey)">Laura Sánchez · Lines Studio</p>
+</section>
+<div class="progress" id="progress"></div>
+<header class="bar" aria-hidden="true"><span>DE LA CASA</span><span>NOVEMBER 2026</span></header>
+<div class="count" id="count" aria-hidden="true">01 / 21</div>
+
+<main>
+<section class="slide hero zoom" aria-label="Cover">
+  <div class="bg"><img src="img/sangria-red.jpg" alt="Close up of sangria with ice" fetchpriority="high"></div>
+  <div class="in">
+    <p class="rv d4">Brand &amp; Packaging</p>
+    <div>
+      <h1><span class="line"><span>Project</span></span><span class="line"><span>Proposal</span></span></h1>
+      <div class="meta rv d5"><span class="hint"><span class="keys"><span>↑</span><span>↓</span></span>Use the arrow keys to move through</span><span>Laura Sánchez · Lines Studio</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide split" aria-labelledby="s-where">
+  <div class="txt">
+    <h2 id="s-where" class="rv">Where we are</h2>
+    <p class="lead rv d1">DE LA CASA is a new ready-to-drink sangría in a square can, a nod to the classic Spanish olive oil tin. Three to start: red, white and a no/low alcohol version.</p>
+    <p class="rv d2">The goal is clear: show buyers real traction with preorders before Christmas, and launch in UK premium retail next summer. Waitrose, Selfridges, Whole Foods.</p>
+  </div>
+  <div class="img zoom"><img src="img/table-olive.jpg" alt="Table laid under an olive tree" loading="lazy"></div>
+</section>
+
+<section class="slide statement center" aria-labelledby="s-ch">
+  <p class="lbl" id="s-ch">The challenge</p>
+  <p class="big" id="statement">Spanish at heart. Premium on the shelf.</p>
+  <div class="foot2">
+    <p class="rv d5">The RTD aisle is split between loud, glossy and instagrammable, and minimal recipe-style labels. DE LA CASA needs its own place in between.</p>
+    <p class="rv d6">The story is already there: the family olive groves in Jaén and the restaurant in Madrid. The brand has to turn it into something people want to pick up, photograph and share.</p>
+  </div>
+</section>
+
+<section class="slide heard" aria-labelledby="s-heard">
+  <div class="txt">
+    <h2 id="s-heard" class="rv">What we heard</h2>
+    <p class="sub rv d1">From our first conversation</p>
+    <ol>
+      <li class="rv d1"><div><b>Spanish, but premium</b>Rooted in the family story, never a cliché.</div></li>
+      <li class="rv d2"><div><b>A Mediterranean world</b>Olive groves, vineyards and Alhambra tiles.</div></li>
+      <li class="rv d2"><div><b>A square can</b>A nod to the classic Spanish olive oil tin.</div></li>
+      <li class="rv d3"><div><b>Lighter tones</b>Pastels, especially for the no/low version.</div></li>
+      <li class="rv d3"><div><b>In between</b>Not loud and glossy, not a plain recipe label.</div></li>
+      <li class="rv d4"><div><b>Built to grow</b>A system ready for new flavours and a wider range.</div></li>
+    </ol>
+  </div>
+  <div class="grid zoom">
+    <div><img src="img/olive-basket.jpg" alt="Hands picking olives into a basket" loading="lazy"></div>
+    <div><img src="img/tiles-bar.jpg" alt="Tiled wall in a Madrid bar" loading="lazy"></div>
+    <div><img src="img/sangria-orange.jpg" alt="Orange drink with ice" loading="lazy"></div>
+    <div><img src="img/table-olive.jpg" alt="Outdoor table with fruit" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="slide mood pad" aria-labelledby="s-mood">
+  <h2 id="s-mood" class="rv">The world we’re drawing from</h2>
+  <div class="mosaic swipe" data-swipe>
+    <div class="a rv d1 zoom"><img src="img/picnic.jpg" alt="Friends sharing sangria by the sea" loading="lazy"></div>
+    <div class="b rv d2 zoom"><img src="img/tiles-bar.jpg" alt="Tiles and beers in a Madrid bar" loading="lazy"></div>
+    <div class="d rv d3 zoom"><img src="img/casa-abuelo.jpg" alt="A classic Madrid bar at night" loading="lazy"></div>
+    <div class="e rv d4 zoom"><img src="img/table-top.jpg" alt="Friends around a table from above" loading="lazy"></div>
+    <div class="c rv d3 zoom"><img src="img/vineyard-bw.jpg" alt="Grape harvest in black and white" loading="lazy"></div>
+  </div>
+  <div class="swipe-hint" aria-hidden="true"></div>
+</section>
+
+<section class="slide div zoom" aria-label="Options">
+  <div class="bg"><img src="img/sangria-orange.jpg" alt="" loading="lazy"></div>
+  <div class="t"><p class="n rv">02 · Options</p><h2><span class="line"><span>Two ways</span></span><span class="line"><span>to build it</span></span></h2></div>
+</section>
+
+<section class="slide options pad" aria-labelledby="s-opts">
+  <h2 id="s-opts" class="rv">Two ways to build it</h2>
+  <div class="opts">
+    <article class="opt rv d1">
+      <div class="ph zoom"><img src="img/grapes-hands.jpg" alt="Hands holding a bunch of grapes" loading="lazy"></div>
+      <div class="otx"><p class="tag">Option A</p><h3>Essential</h3>
+      <p><b>The brand and the cans, ready to produce.</b> A full identity built from the family story, and three cans designed as one system that can grow with new flavours. Focused and fast.</p></div>
+    </article>
+    <article class="opt rv d3">
+      <div class="ph zoom"><img src="img/picnic.jpg" alt="Sangria picnic by the sea" loading="lazy"></div>
+      <div class="otx"><p class="tag">Option B</p><h3>Complete</h3>
+      <p><b>Built for preorders and buyer meetings.</b> Everything in Essential, plus brand platform, photography direction, 3D renders, a social kit, a sell-in deck and a simple landing page, so buyers can see the brand before the first can is printed.</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="slide phrase ph-olive center pad" aria-label="Built to grow">
+  <p class="big"><span class="line"><span>One brand.</span></span><span class="line"><span>Three cans.</span></span><span class="line"><span>Room for many more.</span></span></p>
+  <p class="small rv d4">A range system ready for new flavours from day one.</p>
+</section>
+
+<section class="slide div zoom" aria-label="Process">
+  <div class="bg"><img src="img/vine-leaves.jpg" alt="" loading="lazy"></div>
+  <div class="t"><p class="n rv">03 · Process</p><h2><span class="line"><span>How I’ll</span></span><span class="line"><span>work</span></span></h2></div>
+</section>
+
+<section class="slide phases pad" aria-labelledby="s-ph">
+  <div class="intro">
+    <div><h2 id="s-ph" class="rv" style="font-size:clamp(28px,min(2.8vw,5vh),44px)">How I’ll work</h2>
+    <p class="rv d1">The process is structured in four phases, one step at a time.</p></div>
+    <p class="note rv d2">Throughout the whole process I’ll be available for feedback, questions and check-ins.</p>
+  </div>
+  <div class="cards swipe" data-swipe>
+    <article class="card rv d1"><img src="img/olive-branch.jpg" alt="" loading="lazy"><div class="c"><div><h3>Phase 1</h3><small>STRATEGY &amp; DIRECTION</small></div><p>Research, positioning and brand platform. Moodboards and 2-3 creative routes.</p></div></article>
+    <article class="card rv d2"><img src="img/tiles-bar.jpg" alt="" loading="lazy"><div class="c"><div><h3>Phase 2</h3><small>BRAND IDENTITY</small></div><p>Logo system, colour per flavour, typography, illustration and photography direction, guidelines.</p></div></article>
+    <article class="card rv d3"><img src="img/sangria-red.jpg" alt="" loading="lazy"><div class="c"><div><h3>Phase 3</h3><small>PACKAGING</small></div><p>Built to grow: a range system ready for new flavours, the 3 cans, 3D renders and final artwork.</p></div></article>
+    <article class="card rv d4"><img src="img/table-top.jpg" alt="" loading="lazy"><div class="c"><div><h3>Phase 4</h3><small>LAUNCH KIT</small></div><p>Social starter kit, sell-in deck for buyers and a simple landing page for preorders. <em>Complete only.</em></p></div></article>
+  </div>
+  <div class="swipe-hint" aria-hidden="true"></div>
+</section>
+
+<section class="slide div zoom" aria-label="Numbers">
+  <div class="bg"><img src="img/vineyard-bw.jpg" alt="" loading="lazy"></div>
+  <div class="t"><p class="n rv">04 · Numbers</p><h2><span class="line"><span>The</span></span><span class="line"><span>numbers</span></span></h2></div>
+</section>
+
+<section class="slide pad" aria-labelledby="s-num">
+  <div class="num-grid">
+    <div class="num-side rv">
+      <div><p class="big">04</p><h3 id="s-num">DE LA CASA<br>Brand &amp; Packaging</h3></div>
+      <div>
+        <p class="extras"><b>Extras if needed</b><br>Extra flavour: 400 €<br>Multipack / outer case: from 450 €<br>Extra revision round: 150 €<br>Sleeve / direct print switch: from 250 €</p>
+        <p class="vat" style="color:var(--ink)">Proposal valid until 7 December 2026.</p>
+        <p class="vat" style="margin-top:.6vh">VAT not applicable: export of services outside the EU (art. 69 Ley 37/1992).</p>
+      </div>
+    </div>
+    <article class="plan rv d1">
+      <h3>Option A · Essential</h3>
+      <p class="lbl">Included:</p>
+      <ul><li>Research and creative direction</li><li>2-3 creative routes to choose from</li><li>Logo system, palette and typography</li><li>Graphic system and illustration direction</li><li>Brand guidelines</li><li>Design for the 3 cans</li><li>Final artwork to supplier specs</li><li>Two rounds of revisions per phase</li></ul>
+      <div class="price"><p class="v" data-count="2900">2.900 €</p><small>Strategy 400 € · Identity 1.200 € · Packaging 1.300 €</small></div>
+    </article>
+    <article class="plan dark rv d2">
+      <h3>Option B · Complete</h3>
+      <p class="lbl">Included:</p>
+      <ul><li>Everything in Essential</li><li>Brand platform: story, tone, key messages</li><li>Photography style guide</li><li>3D renders for preorders and buyers</li><li>Social starter kit</li><li>Sell-in deck for buyers</li><li>Simple landing page on your template</li><li>Two rounds of revisions per phase</li></ul>
+      <div class="price"><p class="v" data-count="4500">4.500 €</p><small>Strategy 600 € · Identity 1.400 € · Packaging 1.500 € · Launch 1.000 €</small></div>
+    </article>
+  </div>
+</section>
+
+<section class="slide div zoom" aria-label="Roadmap">
+  <div class="bg"><img src="img/olive-basket.jpg" alt="" loading="lazy"></div>
+  <div class="t"><p class="n rv">05 · Roadmap</p><h2><span class="line"><span>Roadmap &amp;</span></span><span class="line"><span>next steps</span></span></h2></div>
+</section>
+
+<section class="slide dates pad" aria-labelledby="s-kd">
+  <div>
+    <h2 id="s-kd" class="rv">Key dates</h2>
+    <p class="sm rv d1">NOVEMBER - DECEMBER</p>
+    <ul class="kd">
+      <li class="rv d1"><b>4-5 Nov</b>Proposal review. Scope confirmed and deposit.</li>
+      <li class="rv d2"><b>9-13 Nov</b>Materials received and research.</li>
+      <li class="rv d2"><b>16-20 Nov</b>Phase 1. Strategy and creative routes.</li>
+      <li class="rv d3"><b>23 Nov-2 Dec</b>Phase 2. Brand identity, two rounds of feedback.</li>
+      <li class="rv d3"><b>3-11 Dec</b>Phases 3-4. Cans, renders and landing, in time for preorders.</li>
+      <li class="rv d4"><b>Jan 2027</b>Sell-in deck and final artwork to the supplier’s dieline. Summer launch.</li>
+    </ul>
+  </div>
+  <div class="cal rv d2" role="img" aria-label="Calendar from 2 November to 13 December 2026 showing each phase">
+    <h3>November - December 2026</h3>
+    <div class="head"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+    <div id="rows"></div>
+  </div>
+</section>
+
+<section class="slide phrase ph-lemon center pad" aria-label="Preorders">
+  <p class="big"><span class="line"><span>Ready for preorders</span></span><span class="line"><span>by 11 December.</span></span></p>
+  <p class="small rv d4">Renders and landing live before Christmas, so buyers see traction before summer.</p>
+</section>
+
+<section class="slide eye pad" aria-labelledby="s-eye">
+  <div class="side">
+    <h2 id="s-eye" class="rv" style="font-size:clamp(28px,min(3.2vw,6vh),50px)">Things I’ll keep an eye on</h2>
+    <p class="rv d1">Four things that can slow a launch down. I’ll plan for them from day one.</p>
+    <div class="pic rv d2 zoom"><img src="img/sangria-orange.jpg" alt="" loading="lazy"></div>
+  </div>
+  <div class="eyes">
+    <article class="rv d1"><div class="dot" style="background:var(--rose)">01</div><h3>Printing on cans</h3><p>Aluminium is silver: pastels need a white base and a physical proof. A sleeve is a good option for the first run.</p></article>
+    <article class="rv d2"><div class="dot" style="background:var(--olive);color:#fff">02</div><h3>Labelling</h3><p>Space reserved from day one for ABV, volume, allergens, units, pregnancy logo and barcode. UK, EU and Portman Group rules checked with a specialist.</p></article>
+    <article class="rv d3"><div class="dot" style="background:var(--lemon)">03</div><h3>The no/low version</h3><p>Naming and labelling rules are different for low and alcohol-free drinks. Worth confirming early.</p></article>
+    <article class="rv d4"><div class="dot" style="background:var(--wine);color:#fff">04</div><h3>Name &amp; trademark</h3><p>Make sure De La Casa can be registered in the UK and the EU before we build the identity on it.</p></article>
+  </div>
+</section>
+
+<section class="slide together pad" aria-labelledby="s-tog">
+  <div><h2 id="s-tog" class="rv">How we work together</h2><div class="half rv d1" aria-hidden="true"></div></div>
+  <dl>
+    <div class="rv d1"><dt><b>Communication</b></dt><dd>WhatsApp for speed and agility, Meet for key reviews.</dd></div>
+    <div class="rv d2"><dt><b>Reviews</b></dt><dd>Two rounds of revisions included per phase.</dd></div>
+    <div class="rv d2"><dt><b>Sign-off</b></dt><dd>One person validates each phase before we move on.</dd></div>
+    <div class="rv d3"><dt><b>Check-ins</b></dt><dd>As many as needed. I’ll be available and responsive throughout.</dd></div>
+    <div class="rv d3"><dt><b>Files</b></dt><dd>Print-ready PDFs and editable AI files, so your team can make small changes independently.</dd></div>
+    <div class="rv d4"><dt><b>Payment</b></dt><dd>50% upfront to confirm the project and block the time. 50% on delivery of the designs in December. Adapting the artwork to the supplier’s dieline is included until March 2027.</dd></div>
+  </dl>
+</section>
+
+<section class="slide need" aria-labelledby="s-need">
+  <div class="band zoom">
+    <img src="img/grapes-hands.jpg" alt="" loading="lazy">
+    <h2 id="s-need" class="rv" style="font-size:clamp(26px,min(2.8vw,5vh),42px)">What I need from you to get started</h2>
+    <ul class="rv d1">
+      <li>Final name and trademark check</li><li>Itse’s research, references and notes</li><li>Product names, ABV and can size</li>
+      <li>Can supplier specs and dieline</li><li>Family photos from Jaén and the restaurant</li><li>Who signs off each phase</li>
+    </ul>
+  </div>
+  <div class="stats">
+    <div class="rv d2"><b>4-5 Nov</b><span>Proposal review and deposit</span></div>
+    <div class="rv d3"><b>20 Nov</b><span>First creative routes on the table</span></div>
+    <div class="rv d4"><b>11 Dec</b><span>Renders and landing ready for preorders before Christmas</span></div>
+  </div>
+</section>
+
+<section class="slide contact" aria-labelledby="s-ct">
+  <div class="txt"><h2 id="s-ct" class="rv">Contact</h2><div class="semi rv d1"><img src="img/tiles-bar.jpg" alt="" loading="lazy"></div></div>
+  <div class="card2 zoom">
+    <img src="img/vine-leaves.jpg" alt="" loading="lazy">
+    <div class="who rv d1"><div class="face"><img src="img/laura.jpg" alt="Laura Sánchez"></div><p><b>Laura Sánchez</b>Creative designer<br>Lines Studio</p></div>
+    <p class="reach rv d2"><a href="mailto:laurawork.sanchez@gmail.com">laurawork.sanchez@gmail.com</a><br>Tlf: <a href="tel:+34682927098">+34 682 927 098</a></p>
+  </div>
+</section>
+
+<section class="slide end" id="endSlide" aria-label="Ready to get started">
+  <div class="words">
+    <div class="big3">
+      <div class="r"><span class="line"><span>Ready to</span></span><span class="p rv d2 zoom"><img src="img/toast.jpg" alt="" loading="lazy"></span></div>
+      <div class="r"><span class="p rv d3 zoom"><img src="img/picnic.jpg" alt="" loading="lazy"></span><span class="line"><span>get started?</span></span></div>
+    </div>
+    <p class="thanks rv d3">Thank you!</p>
+    <p class="cap rv d4">First creative routes on 20 November.</p>
+  </div>
+  <div class="canwrap"><canvas id="can" role="img" aria-label="3D render of a red rectangular tin with a question mark"></canvas></div>
+</section>
+</main>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const slides = [...document.querySelectorAll('.slide')];
+  const total = slides.length;
+  const pad = n => String(n).padStart(2, '0');
+  const countEl = document.getElementById('count'), prog = document.getElementById('progress');
+
+  // calendar
+  const rows = document.getElementById('rows');
+  const C = { grey:'#8C8C8C', light:'#D9D9D6', olive:'#4A5A2A', wine:'#7B2638', terra:'#C9573A', lemon:'#F2D27A' };
+  const bars = [[0,2,3,'Review',C.grey],[1,0,4,'Materials & research',C.light,'#222'],[2,0,4,'Phase 1 · Strategy & routes',C.olive],
+    [3,0,4,'Phase 2 · Brand identity',C.wine],[4,0,2,'Phase 2 · Feedback',C.wine],[4,3,4,'Phase 3',C.terra],
+    [5,0,3,'Phases 3-4 · Cans, renders, landing',C.terra],[5,4,4,'Preorders',C.lemon,'#222']];
+  const short = {'Review':'Review','Materials & research':'Materials','Phase 1 · Strategy & routes':'Phase 1 · Routes','Phase 2 · Brand identity':'Phase 2 · Identity','Phase 2 · Feedback':'Feedback','Phase 3':'Ph. 3','Phases 3-4 · Cans, renders, landing':'Phases 3-4','Preorders':'Live'};
+  [2, 9, 16, 23, 30, 7].forEach((s, r) => {
+    const row = document.createElement('div'); row.className = 'row';
+    for (let c = 0; c < 7; c++) {
+      let d = s + c, dec = r === 5; if (r === 4 && d > 30) { d -= 30; dec = true; }
+      const sp = document.createElement('span');
+      sp.textContent = (d === 1 && dec) ? '1 Dec' : d;
+      sp.className = (d === 1 && dec) ? 'm' : (c > 4 ? 'we' : '');
+      row.appendChild(sp);
+    }
+    bars.filter(b => b[0] === r).forEach((b, i) => {
+      const el = document.createElement('div'); el.className = 'barx';
+      el.style.left = `calc(${b[1]} * 100% / 7 + 3px)`;
+      el.style.width = `calc(${b[2] - b[1] + 1} * 100% / 7 - 6px)`;
+      el.style.background = b[4]; if (b[5]) el.style.color = b[5];
+      el.style.transitionDelay = (0.3 + r * 0.12 + i * 0.06) + 's';
+      el.innerHTML = '<i class="l">' + b[3] + '</i><i class="s">' + short[b[3]] + '</i>';
+      row.appendChild(el);
+    });
+    rows.appendChild(row);
+  });
+
+  // statement words
+  const st = document.getElementById('statement');
+  st.innerHTML = st.textContent.split(' ').map((w, i) => `<span class="w" style="transition-delay:${0.15 + i * 0.11}s">${w}</span>`).join(' ');
+
+  // counters
+  const counted = new WeakSet();
+  function count(el) {
+    if (counted.has(el)) return; counted.add(el);
+    if (reduce) return;
+    const end = +el.dataset.count, t0 = performance.now() + 450, dur = 1400;
+    const fmt = n => n.toLocaleString('de-DE') + ' €';
+    const step = t => { const p = Math.min(1, Math.max(0, (t - t0) / dur)), e = 1 - Math.pow(1 - p, 4);
+      el.textContent = fmt(Math.round(end * e / 10) * 10); if (p < 1) requestAnimationFrame(step); };
+    el.textContent = fmt(0); requestAnimationFrame(step);
+  }
+
+  // activation
+  const desk = () => matchMedia('(min-width:900px) and (min-height:560px)').matches;
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    const need = desk() ? 0.5 : 0.15;
+    if (e.intersectionRatio >= need) {
+      e.target.classList.add('active');
+      e.target.querySelectorAll('[data-count]').forEach(count);
+    }
+  }), { threshold: [0, 0.15, 0.3, 0.5, 0.7] });
+  slides.forEach(s => io.observe(s));
+  requestAnimationFrame(() => setTimeout(() => slides[0].classList.add('active'), 60));
+  if (reduce) slides.forEach(s => s.classList.add('active'));
+
+  // mobile: reveal each element as it enters
+  if (!desk() && !reduce) {
+    const eio = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('on'); e.target.querySelectorAll && e.target.querySelectorAll('[data-count]').forEach(count); if (e.target.dataset.count) count(e.target); eio.unobserve(e.target); }
+    }), { threshold: 0.2, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.rv,.line,.zoom,.card,.cal,.big,[data-count]').forEach(el => eio.observe(el));
+  }
+  document.querySelectorAll('[data-swipe]').forEach(row => {
+    const hint = row.parentElement.querySelector('.swipe-hint'); if (!hint) return;
+    const items = [...row.children];
+    hint.innerHTML = items.map(() => '<i></i>').join('');
+    const dots = [...hint.children];
+    const upd = () => { const i = Math.round(row.scrollLeft / (items[0].offsetWidth + 10)); dots.forEach((d, j) => d.classList.toggle('on', j === Math.min(i, dots.length - 1))); };
+    row.addEventListener('scroll', () => requestAnimationFrame(upd), { passive: true }); upd();
+  });
+
+  // current slide + counter + progress
+  function current() {
+    const mid = scrollY + innerHeight * 0.4;
+    let idx = 0; slides.forEach((s, i) => { if (s.offsetTop <= mid) idx = i; });
+    return idx;
+  }
+  let tick = false;
+  addEventListener('scroll', () => {
+    if (tick) return; tick = true;
+    requestAnimationFrame(() => {
+      tick = false;
+      const H = document.documentElement.scrollHeight - innerHeight;
+      prog.style.transform = `scaleX(${Math.min(1, scrollY / H)})`;
+      countEl.textContent = pad(current() + 1) + ' / ' + pad(total);
+    });
+  }, { passive: true });
+  countEl.textContent = '01 / ' + pad(total);
+
+  // keyboard navigation
+  function go(i) {
+    i = Math.max(0, Math.min(total - 1, i));
+    slides[i].scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+  }
+  addEventListener('keydown', e => {
+    if (e.target.closest('input,textarea,select,[contenteditable]') || e.metaKey || e.ctrlKey || e.altKey) return;
+    const k = e.key;
+    if (['ArrowDown', 'ArrowRight', 'PageDown', ' '].includes(k)) { e.preventDefault(); go(current() + (e.shiftKey && k === ' ' ? -1 : 1)); }
+    else if (['ArrowUp', 'ArrowLeft', 'PageUp'].includes(k)) { e.preventDefault(); go(current() - 1); }
+    else if (k === 'Home') { e.preventDefault(); go(0); }
+    else if (k === 'End') { e.preventDefault(); go(total - 1); }
+  });
+})();
+</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+
+const slide = document.getElementById('endSlide'), canvas = document.getElementById('can');
+let started = false, visible = false;
+new IntersectionObserver(es => es.forEach(e => {
+  visible = e.isIntersecting;
+  if (visible && !started) { started = true; init(); }
+}), { rootMargin: '150% 0px' }).observe(slide);
+
+// geometric question mark, monoline with a square dot
+function printTexture(w, h) {
+  const W = 1024, H = Math.round(1024 * h / w), c = document.createElement('canvas'); c.width = W; c.height = H;
+  const g = c.getContext('2d');
+  g.fillStyle = '#8E1426'; g.fillRect(0, 0, W, H);
+  g.save(); g.translate(W / 2, H / 2 - H * .03); g.scale(.86, .86); g.translate(-512, -768);
+  g.strokeStyle = g.fillStyle = '#F7F5F2';
+  g.lineWidth = 104; g.lineCap = 'butt'; g.lineJoin = 'miter';
+  const cx = 512, cy = 560, r = 205;
+  g.beginPath();
+  g.moveTo(cx - r, cy + 6);
+  g.arc(cx, cy, r, Math.PI, Math.PI * 2 + .62, false);
+  const ex = cx + r * Math.cos(.62), ey = cy + r * Math.sin(.62);
+  g.lineTo(cx + 2, ey + (ex - cx) * .55);
+  g.lineTo(cx + 2, 970);
+  g.stroke();
+  g.fillRect(cx - 50, 1062, 104, 104);
+  g.restore();
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t;
+}
+function rrect(w, d, r) {
+  const s = new THREE.Shape(), x = -w / 2, z = -d / 2;
+  s.moveTo(x + r, z); s.lineTo(-x - r, z); s.absarc(-x - r, z + r, r, -Math.PI / 2, 0);
+  s.lineTo(-x, -z - r); s.absarc(-x - r, -z - r, r, 0, Math.PI / 2);
+  s.lineTo(x + r, -z); s.absarc(x + r, -z - r, r, Math.PI / 2, Math.PI);
+  s.lineTo(x, z + r); s.absarc(x + r, z + r, r, Math.PI, Math.PI * 1.5);
+  return s;
+}
+function peel() {
+  const n = 256, c = document.createElement('canvas'); c.width = c.height = n;
+  const g = c.getContext('2d'); const img = g.createImageData(n, n);
+  const h = new Float32Array(n * n); for (let i = 0; i < h.length; i++) h[i] = Math.random();
+  for (let k = 0; k < 3; k++) { const t = h.slice(); for (let y = 0; y < n; y++) for (let x = 0; x < n; x++) {
+    let a = 0; for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) a += t[((y + dy + n) % n) * n + (x + dx + n) % n]; h[y * n + x] = a / 9; } }
+  for (let y = 0; y < n; y++) for (let x = 0; x < n; x++) {
+    const dx = h[y * n + (x + 1) % n] - h[y * n + (x - 1 + n) % n], dy = h[((y + 1) % n) * n + x] - h[((y - 1 + n) % n) * n + x];
+    const i = (y * n + x) * 4; img.data[i] = 128 + dx * 900; img.data[i + 1] = 128 + dy * 900; img.data[i + 2] = 255; img.data[i + 3] = 255; }
+  g.putImageData(img, 0, 0);
+  const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(10, 10); return t;
+}
+function shadowTexture(a) {
+  const c = document.createElement('canvas'); c.width = c.height = 256;
+  const g = c.getContext('2d'), r = g.createRadialGradient(128, 128, 0, 128, 128, 128);
+  r.addColorStop(0, `rgba(0,0,0,${a})`); r.addColorStop(.6, `rgba(0,0,0,${a * .3})`); r.addColorStop(1, 'rgba(0,0,0,0)');
+  g.fillStyle = r; g.fillRect(0, 0, 256, 256); return new THREE.CanvasTexture(c);
+}
+// studio environment: soft grey room with large softboxes, for long clean reflections
+function studio(renderer) {
+  const env = new THREE.Scene();
+  env.add(new THREE.Mesh(new THREE.SphereGeometry(20, 32, 16), new THREE.MeshBasicMaterial({ color: 0x2c2c2c, side: THREE.BackSide })));
+  const box = (w, h, x, y, z, ry, rx, k) => {
+    const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ color: new THREE.Color(k, k, k), side: THREE.DoubleSide }));
+    m.position.set(x, y, z); m.rotation.y = ry; m.rotation.x = rx || 0; env.add(m);
+  };
+  box(3, 9, -6, 2, 4, Math.PI / 3.2, 0, 8);     // tall key strip, front left
+  box(2.2, 8, 7, 1, 3, -Math.PI / 2.6, 0, 4);   // fill strip, right
+  box(10, 6, 0, 9, 0, 0, Math.PI / 2, 3);     // overhead
+  box(12, 3, 0, -1, -9, 0, 0, 1.2);             // back wall glow
+  // big graded softbox behind the camera: gives the front face a soft gloss falloff
+  const gc = document.createElement('canvas'); gc.width = 256; gc.height = 256;
+  const gg = gc.getContext('2d'), lg = gg.createLinearGradient(0, 0, 256, 256);
+  lg.addColorStop(0, '#ffffff'); lg.addColorStop(.45, '#5a5a5a'); lg.addColorStop(1, '#151515');
+  gg.fillStyle = lg; gg.fillRect(0, 0, 256, 256);
+  const gt = new THREE.CanvasTexture(gc); gt.colorSpace = THREE.SRGBColorSpace;
+  const gb = new THREE.Mesh(new THREE.PlaneGeometry(9, 7), new THREE.MeshBasicMaterial({ map: gt, color: new THREE.Color(1.6, 1.6, 1.6) }));
+  gb.position.set(-1.5, 2.5, 9); gb.lookAt(0, 0, 0); env.add(gb);
+  const pm = new THREE.PMREMGenerator(renderer);
+  return pm.fromScene(env, 0.02).texture;
+}
+
+function init() {
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.toneMapping = THREE.LinearToneMapping; renderer.toneMappingExposure = 1.05;
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  const scene = new THREE.Scene();
+  scene.environment = studio(renderer);
+  const camera = new THREE.PerspectiveCamera(18, 1, .1, 100);
+  const key = new THREE.DirectionalLight(0xffffff, 1.5); key.position.set(-2.5, 3.5, 4.5); scene.add(key);
+  const fillL = new THREE.DirectionalLight(0xffffff, .7); fillL.position.set(3, 1, 3); scene.add(fillL);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x9a9a98, .35));
+
+  const Wd = 1.0, D = .5, Ht = 1.4, R = .1;
+  const tin = new THREE.Group(); scene.add(tin);
+
+  // glossy red lacquer over tinplate
+  const peelTex = peel();
+  const paint = new THREE.MeshPhysicalMaterial({ color: new THREE.Color('#8E1426'), metalness: .08, roughness: .22, clearcoat: 1, clearcoatRoughness: .06, clearcoatNormalMap: peelTex, clearcoatNormalScale: new THREE.Vector2(.025, .025) });
+  // body: only the vertical edges are rounded, like a real tin
+  const bodyGeo = new THREE.ExtrudeGeometry(rrect(Wd, D, R), { depth: Ht, bevelEnabled: false, curveSegments: 24 });
+  bodyGeo.rotateX(-Math.PI / 2); bodyGeo.translate(0, -Ht / 2, 0); bodyGeo.computeVertexNormals();
+  tin.add(new THREE.Mesh(bodyGeo, paint));
+
+  // front and back faces: very slightly bulged panels, like real tinplate, so the gloss falls off naturally
+  const fw = Wd - 2 * R + .004, fh = Ht;
+  const pt = printTexture(fw * 1.0, fh);
+  const face = new THREE.MeshPhysicalMaterial({ map: pt, color: 0xffffff, metalness: .08, roughness: .22, clearcoat: 1, clearcoatRoughness: .06, clearcoatNormalMap: peelTex, clearcoatNormalScale: new THREE.Vector2(.025, .025) });
+  const fg = new THREE.PlaneGeometry(fw, fh, 40, 60), pos = fg.attributes.position;
+  for (let i = 0; i < pos.count; i++) {
+    const x = pos.getX(i) / (fw / 2), y = pos.getY(i) / (fh / 2);
+    pos.setZ(i, .007 * (1 - x * x) * (1 - Math.pow(Math.abs(y), 8)));
+  }
+  fg.computeVertexNormals();
+  [1, -1].forEach(side => {
+    const p = new THREE.Mesh(fg, face);
+    p.position.z = side * (D / 2 + .0008); if (side < 0) p.rotation.y = Math.PI; tin.add(p);
+  });
+
+  const steel = new THREE.MeshPhysicalMaterial({ color: 0xe2e2e0, metalness: 1, roughness: .18 });
+  const steelSoft = new THREE.MeshPhysicalMaterial({ color: 0xcfcfcc, metalness: 1, roughness: .3 });
+  // rolled seams follow the rounded corners and barely stand proud of the body
+  const seamGeo = new THREE.ExtrudeGeometry(rrect(Wd + .006, D + .006, R + .003), { depth: .014, bevelEnabled: true, bevelThickness: .006, bevelSize: .004, bevelSegments: 5, curveSegments: 24 });
+  seamGeo.rotateX(-Math.PI / 2); seamGeo.translate(0, -.007, 0); seamGeo.computeVertexNormals();
+  [1, -1].forEach(dir => { const m = new THREE.Mesh(seamGeo, steel); m.position.y = dir * (Ht / 2 - .002); tin.add(m); });
+  const lidGeo = new THREE.ExtrudeGeometry(rrect(Wd - .02, D - .02, R - .01), { depth: .008, bevelEnabled: true, bevelThickness: .003, bevelSize: .003, bevelSegments: 3, curveSegments: 24 });
+  lidGeo.rotateX(-Math.PI / 2); const lid = new THREE.Mesh(lidGeo, steelSoft); lid.position.y = Ht / 2 + .001; tin.add(lid);
+
+  // PET screw cap: white, knurled, on a metal spout near the right edge
+  const cx = Wd / 2 - .19, cz = 0, capR = .105, capH = .095;
+  const spout = new THREE.Mesh(new THREE.CylinderGeometry(capR + .028, capR + .036, .012, 64), steel);
+  spout.position.set(cx, Ht / 2 + .016, cz); tin.add(spout);
+  const neck = new THREE.Mesh(new THREE.CylinderGeometry(capR + .006, capR + .006, .03, 64), steel);
+  neck.position.set(cx, Ht / 2 + .035, cz); tin.add(neck);
+  const pet = new THREE.MeshPhysicalMaterial({ color: new THREE.Color('#7A1320'), roughness: .42, metalness: 0, clearcoat: .35, clearcoatRoughness: .35 });
+  const cap = new THREE.Mesh(new THREE.CylinderGeometry(capR, capR + .003, capH, 96), pet);
+  cap.position.set(cx, Ht / 2 + .05 + capH / 2, cz); tin.add(cap);
+  const ribGeo = new THREE.BoxGeometry(.009, capH * .8, .01);
+  for (let k = 0; k < 56; k++) {
+    const a = k / 56 * Math.PI * 2, rib = new THREE.Mesh(ribGeo, pet);
+    rib.position.set(cx + Math.cos(a) * (capR + .002), cap.position.y - capH * .06, cz + Math.sin(a) * (capR + .002)); rib.rotation.y = -a; tin.add(rib);
+  }
+  const capTop = new THREE.Mesh(new THREE.TorusGeometry(capR - .008, .008, 12, 96), pet);
+  capTop.rotation.x = Math.PI / 2; capTop.position.set(cx, cap.position.y + capH / 2, cz); tin.add(capTop);
+
+  // contact shadows: tight + soft
+  const sh1 = new THREE.Mesh(new THREE.PlaneGeometry(1.5, 1.1), new THREE.MeshBasicMaterial({ map: shadowTexture(.6), transparent: true, depthWrite: false }));
+  const sh2 = new THREE.Mesh(new THREE.PlaneGeometry(2.6, 1.9), new THREE.MeshBasicMaterial({ map: shadowTexture(.22), transparent: true, depthWrite: false }));
+  [sh1, sh2].forEach(m => { m.rotation.x = -Math.PI / 2; m.position.y = -Ht / 2 - .02; scene.add(m); });
+
+  function size() {
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    renderer.setSize(w, h, false); camera.aspect = w / h;
+    const mob = innerWidth < 900;
+    camera.position.set(0, .9, mob ? 12.8 : 8.6); camera.lookAt(0, .02, 0);
+    if (mob) camera.setViewOffset(w, h, 0, -h * .17, w, h);
+    else camera.setViewOffset(w, h, -w * .185, -h * .02, w, h);
+    camera.updateProjectionMatrix();
+  }
+  size(); addEventListener('resize', size);
+
+  // rotation follows the person only: page scroll, plus wheel / swipe once at the end
+  let extra = 0, cur = null, t0x = null;
+  const atEnd = () => innerHeight + scrollY >= document.documentElement.scrollHeight - 4;
+  addEventListener('wheel', e => { if (visible && atEnd()) extra += e.deltaY * .004; }, { passive: true });
+  slide.addEventListener('touchstart', e => { t0x = e.touches[0].clientX; }, { passive: true });
+  slide.addEventListener('touchmove', e => { if (t0x == null) return; const x = e.touches[0].clientX; extra += (x - t0x) * .012; t0x = x; }, { passive: true });
+
+  function frame() {
+    requestAnimationFrame(frame);
+    if (!visible) return;
+    const p = Math.max(-1, Math.min(1.5, slide.getBoundingClientRect().top / innerHeight));
+    const target = -.38 - p * Math.PI * 2 - extra;
+    cur = cur == null ? target : cur + (target - cur) * .09;
+    tin.rotation.y = cur;
+    renderer.render(scene, camera);
+  }
+  frame();
+}
+</script>
+</body>
+</html>
